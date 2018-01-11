@@ -1,0 +1,35 @@
+{
+	"name": "query-fis-broker-wfs",
+	"description": "Query WFS sources in the Berlin geodata portal \"FIS-Broker\".",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"berlin",
+		"geodata",
+		"geospatial",
+		"wfs",
+		"api",
+		"open data"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/query-fis-broker-wfs",
+	"repository": "derhuerst/query-fis-broker-wfs",
+	"bugs": "https://github.com/derhuerst/query-fis-broker-wfs/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tap-min": "^1.2.2",
+		"tape": "^4.8.0"
+	},
+	"scripts": {
+		"test": "env NODE_ENV=dev node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
