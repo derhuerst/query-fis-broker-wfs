@@ -34,8 +34,10 @@
 		"xml-reader": "^2.4.3"
 	},
 	"devDependencies": {
+		"is-stream": "^1.1.0",
 		"tap-min": "^1.2.2",
-		"tape": "^4.8.0"
+		"tape": "^4.8.0",
+		"tape-promise": "^2.0.1"
 	},
 	"scripts": {
 		"test": "env NODE_ENV=dev node test.js | tap-min",
