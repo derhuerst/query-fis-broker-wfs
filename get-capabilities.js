@@ -8,7 +8,7 @@ const getCapabilities = (endpoint) => {
 		operations: [],
 		allowedVersions: [],
 		defaultVersion: null,
-		featureTypes: [],
+		layers: [],
 		spatialCapabilities: []
 	}
 
@@ -74,7 +74,7 @@ const getCapabilities = (endpoint) => {
 			}
 		}
 
-		data.featureTypes.push(res)
+		data.layers.push(res)
 	}
 
 	const onFeatureTypeList = (list) => {

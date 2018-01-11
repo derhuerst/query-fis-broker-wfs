@@ -63,31 +63,31 @@ test('getCapabilities', async (t) => {
 		}
 	}
 
-	t.ok(Array.isArray(caps.featureTypes))
-	for (let type of caps.featureTypes) {
-		t.ok(type)
+	t.ok(Array.isArray(caps.layers))
+	for (let layer of caps.layers) {
+		t.ok(layer)
 
-		t.equal('string', typeof type.name)
-		t.ok(type.name)
-		t.equal('string', typeof type.title)
-		t.equal('string', typeof type.description)
-		t.equal('string', typeof type.crs)
-		t.ok(type.crs)
+		t.equal('string', typeof layer.name)
+		t.ok(layer.name)
+		t.equal('string', typeof layer.title)
+		t.equal('string', typeof layer.description)
+		t.equal('string', typeof layer.crs)
+		t.ok(layer.crs)
 
-		if (type.outputFormats !== null) {
-			t.ok(Array.isArray(type.outputFormats))
-			for (let format of type.outputFormats) {
+		if (layer.outputFormats !== null) {
+			t.ok(Array.isArray(layer.outputFormats))
+			for (let format of layer.outputFormats) {
 				t.equal('string', typeof format)
 				t.ok(format)
 			}
 		}
 
-		t.ok(isObj(type.bbox))
-		if (isObj(type.bbox)) {
-			t.equal('number', typeof type.bbox.minLat)
-			t.equal('number', typeof type.bbox.minLon)
-			t.equal('number', typeof type.bbox.maxLat)
-			t.equal('number', typeof type.bbox.maxLon)
+		t.ok(isObj(layer.bbox))
+		if (isObj(layer.bbox)) {
+			t.equal('number', typeof layer.bbox.minLat)
+			t.equal('number', typeof layer.bbox.minLon)
+			t.equal('number', typeof layer.bbox.maxLat)
+			t.equal('number', typeof layer.bbox.maxLon)
 		}
 	}
 
