@@ -1,5 +1,7 @@
 # query-fis-broker-wfs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/query-fis-broker-wfs.svg)](https://greenkeeper.io/)
+
 **Query WFS sources in the [Berlin geodata portal *FIS-Broker*](http://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/).**
 
 [![npm version](https://img.shields.io/npm/v/query-fis-broker-wfs.svg)](https://www.npmjs.com/package/query-fis-broker-wfs)
