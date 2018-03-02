@@ -26,7 +26,7 @@
 		"node": ">=6"
 	},
 	"dependencies": {
-		"fetch-ponyfill": "^5.0.0",
+		"fetch-ponyfill": "^6.0.0",
 		"iconv-lite": "^0.4.19",
 		"peek-stream": "^1.1.2",
 		"pinkie-promise": "^2.0.1",
