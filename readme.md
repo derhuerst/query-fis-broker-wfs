@@ -6,6 +6,7 @@
 [![build status](https://api.travis-ci.org/derhuerst/query-fis-broker-wfs.svg?branch=master)](https://travis-ci.org/derhuerst/query-fis-broker-wfs)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/query-fis-broker-wfs.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Installing
@@ -22,7 +23,7 @@ const getFeatures = require('query-fis-broker-wfs/get-features')
 
 const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/geometry/senstadt/re_postleit'
 const layer = 'fis:re_postleit'
-const bbox = [todo]
+const bbox = [387000, 5812000, 386000, 5813000]
 
 getFeatures(endpoint, layer, {bbox})
 .on('data', console.log)
