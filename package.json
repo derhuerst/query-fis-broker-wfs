@@ -37,7 +37,7 @@
 		"is-stream": "^1.1.0",
 		"tap-min": "^1.2.2",
 		"tape": "^4.8.0",
-		"tape-promise": "^3.0.0"
+		"tape-promise": "^4.0.0"
 	},
 	"scripts": {
 		"test": "env NODE_ENV=dev node test.js | tap-min",
