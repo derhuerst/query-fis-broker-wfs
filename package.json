@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"is-stream": "^1.1.0",
-		"tap-min": "^1.2.2",
+		"tap-min": "^2.0.0",
 		"tape": "^4.8.0",
 		"tape-promise": "^4.0.0"
 	},
