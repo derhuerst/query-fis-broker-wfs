@@ -37,7 +37,7 @@
 	"devDependencies": {
 		"is-stream": "^2.0.0",
 		"tap-min": "^2.0.0",
-		"tape": "^4.8.0",
+		"tape": "^5.0.0",
 		"tape-promise": "^4.0.0"
 	},
 	"scripts": {
