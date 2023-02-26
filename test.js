@@ -1,7 +1,7 @@
 import _tapePromise from 'tape-promise'
 const {default: tapePromise} = _tapePromise
 import tape from 'tape'
-import isStream from 'is-stream'
+import {isReadableStream} from 'is-stream'
 
 const test = tapePromise(tape)
 
@@ -103,7 +103,7 @@ test('getFeatures', async (t) => {
 	t.equal(all.getFeatures, getFeatures)
 
 	const features = getFeatures(endpoint, layer, {bbox})
-	t.ok(isStream.readable(features))
+	t.ok(isReadableStream(features))
 
 	for await (const feature of features) {
 		t.ok(feature)
