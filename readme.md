@@ -3,7 +3,6 @@
 **Query WFS sources in the [Berlin geodata portal *FIS-Broker*](http://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/).**
 
 [![npm version](https://img.shields.io/npm/v/query-fis-broker-wfs.svg)](https://www.npmjs.com/package/query-fis-broker-wfs)
-[![build status](https://api.travis-ci.org/derhuerst/query-fis-broker-wfs.svg?branch=master)](https://travis-ci.org/derhuerst/query-fis-broker-wfs)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/query-fis-broker-wfs.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 [![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
