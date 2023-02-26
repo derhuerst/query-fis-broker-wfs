@@ -1,7 +1,7 @@
 import {request} from './lib/request.js'
 import {attrOf, findIn, textOf} from './lib/helpers.js'
 
-export const getCapabilities = (endpoint) => {
+export const getCapabilities = async (endpoint) => {
 	const data = {
 		operations: [],
 		allowedVersions: [],
@@ -90,10 +90,11 @@ export const getCapabilities = (endpoint) => {
 		}
 	}
 
-	return request(endpoint, {request: 'GetCapabilities'}, {
+	await request(endpoint, {request: 'GetCapabilities'}, {
 		'ows:OperationsMetadata': onOperationsMetadata,
 		'wfs:FeatureTypeList': onFeatureTypeList,
 		'fes:SpatialOperators': onSpatialOperators
 	})
-	.then(() => data)
+
+	return data
 }

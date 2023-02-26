@@ -10,7 +10,7 @@ const bbox = [387000, 5812000, 386000, 5813000]
 
 {
 	const capabilities = await getCapabilities(endpoint)
-	console.log(inspect(capabilities, {depth: Infinity}))
+	console.log(inspect(capabilities, {depth: Infinity, colors: true}))
 }
 
 {
