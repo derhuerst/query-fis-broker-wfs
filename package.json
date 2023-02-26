@@ -2,6 +2,7 @@
 	"name": "query-fis-broker-wfs",
 	"description": "Query WFS sources in the Berlin geodata portal \"FIS-Broker\".",
 	"version": "1.0.2",
+	"type": "module",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -23,7 +24,7 @@
 	"bugs": "https://github.com/derhuerst/query-fis-broker-wfs/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=8"
+		"node": ">=18"
 	},
 	"dependencies": {
 		"debug": "^4.1.1",

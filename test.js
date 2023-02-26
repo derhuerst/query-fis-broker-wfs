@@ -1,14 +1,13 @@
-'use strict'
+import _tapePromise from 'tape-promise'
+const {default: tapePromise} = _tapePromise
+import tape from 'tape'
+import isStream from 'is-stream'
 
-const pTape = require('tape-promise').default
-const tape = require('tape')
-const isStream = require('is-stream')
+const test = tapePromise(tape)
 
-const test = pTape(tape)
-
-const all = require('.')
-const getCapabilities = require('./get-capabilities')
-const getFeatures = require('./get-features')
+import * as all from './index.js'
+import {getCapabilities} from './get-capabilities.js'
+import {getFeatures} from './get-features.js'
 
 const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_plz'
 const layer = 'fis:s_plz'
@@ -106,15 +105,10 @@ test('getFeatures', async (t) => {
 	const features = getFeatures(endpoint, layer, {bbox})
 	t.ok(isStream.readable(features))
 
-	features.on('data', (feature) => {
+	for await (const feature of features) {
 		t.ok(feature)
 		// todo
-	})
-
-	await new Promise((resolve, reject) => {
-		features.once('error', reject)
-		features.once('end', resolve)
-	})
+	}
 
 	t.end()
 })

@@ -1,10 +1,8 @@
-'use strict'
+import {Readable} from 'node:stream'
 
-const {Readable} = require('stream')
+import {request} from './lib/request.js'
 
-const request = require('./lib/request')
-
-const defaults = {
+export const defaults = {
 	bbox: null,
 	crs: null,
 	results: null,
@@ -12,7 +10,7 @@ const defaults = {
 	props: null
 }
 
-const getFeatures = (endpoint, layer, opt = {}) => {
+export const getFeatures = (endpoint, layer, opt = {}) => {
 	if ('string' !== typeof layer || !layer) {
 		throw new Error('layer must be a non-empty string.')
 	}
@@ -53,5 +51,3 @@ const getFeatures = (endpoint, layer, opt = {}) => {
 
 	return out
 }
-
-module.exports = getFeatures

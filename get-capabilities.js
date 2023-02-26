@@ -1,9 +1,7 @@
-'use strict'
+import {request} from './lib/request.js'
+import {attrOf, findIn, textOf} from './lib/helpers.js'
 
-const request = require('./lib/request')
-const {attrOf, findIn, textOf} = require('./lib/helpers')
-
-const getCapabilities = (endpoint) => {
+export const getCapabilities = (endpoint) => {
 	const data = {
 		operations: [],
 		allowedVersions: [],
@@ -99,5 +97,3 @@ const getCapabilities = (endpoint) => {
 	})
 	.then(() => data)
 }
-
-module.exports = getCapabilities

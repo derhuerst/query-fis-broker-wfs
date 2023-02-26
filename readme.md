@@ -19,15 +19,16 @@ npm install query-fis-broker-wfs
 ## Usage
 
 ```js
-const getFeatures = require('query-fis-broker-wfs/get-features')
+import {getFeatures} from 'query-fis-broker-wfs/get-features.js'
 
 const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_plz'
 const layer = 'fis:s_plz'
 const bbox = [387000, 5812000, 386000, 5813000]
 
-getFeatures(endpoint, layer, {bbox})
-.on('data', console.log)
-.on('error', console.error)
+const features = getFeatures(endpoint, layer, {bbox}
+for await (const feature of features) {
+	console.log(feature)
+}
 ```
 
 It will return data in the [`xml-reader`](https://www.npmjs.com/package/xml-reader) shape:

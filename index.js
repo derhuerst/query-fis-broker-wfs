@@ -1,9 +1,7 @@
-'use strict'
+import {getCapabilities} from './get-capabilities.js'
+import {getFeatures} from './get-features.js'
 
-const getCapabilities = require('./get-capabilities')
-const getFeatures = require('./get-features')
-
-module.exports = {
+export {
 	getCapabilities,
-	getFeatures
+	getFeatures,
 }
