@@ -24,4 +24,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
 
-    - run: node example.js
+    - run: npm test
