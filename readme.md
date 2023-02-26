@@ -21,8 +21,8 @@ npm install query-fis-broker-wfs
 ```js
 const getFeatures = require('query-fis-broker-wfs/get-features')
 
-const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/geometry/senstadt/re_postleit'
-const layer = 'fis:re_postleit'
+const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_plz'
+const layer = 'fis:s_plz'
 const bbox = [387000, 5812000, 386000, 5813000]
 
 getFeatures(endpoint, layer, {bbox})
@@ -34,32 +34,63 @@ It will return data in the [`xml-reader`](https://www.npmjs.com/package/xml-read
 
 ```js
 {
+	name: 'fis:s_plz',
 	type: 'element',
-	name: 'fis:re_postleit',
+	value: '',
 	parent: {
-		type: 'element',
 		name: 'wfs:member',
-		attributes: {}
+		type: 'element',
+		value: '',
+		parent: { /* … */ },
+		attributes: {},
+		children: [ /* … */ ]
 	},
 	attributes: {
-		'gml:id': 're_postleit.12165'
+		'gml:id': 's_plz.12165'
 	},
-	children: [
-		{
-			type: 'element',
-			name: 'fis:spatial_geometry',
+	children: [{
+		name: 'fis:plz',
+		type: 'element',
+		value: '',
+		parent: [ /* … */ ],
+		attributes: {},
+		children: [{
+			name: '',
+			type: 'text',
+			value: '12165',
+			parent: [ /* … */ ],
 			attributes: {},
-			children: [ {
-				type: 'element',
-				name: 'gml:Polygon',
-				attributes: {
-					'gml:id': 'P1'
-				},
-				children: [ /* GML data */ ]
-			} ],
-		},
-		// …
-	]
+			children: [],
+		}]
+	}, {
+		name: 'fis:finhalt',
+		type: 'element',
+		value: '',
+		parent: [ /* … */ ],
+		attributes: {},
+		children: [{
+			name: '',
+			type: 'text',
+			value: '945018.6987053645',
+			parent: [ /* … */ ],
+			attributes: {},
+			children: [],
+		}]
+	}, {
+		name: 'fis:geom',
+		type: 'element',
+		value: '',
+		parent: [ /* … */ ],
+		attributes: {},
+		children: [{
+			name: 'gml:Polygon',
+			type: 'element',
+			value: '',
+			parent: [ /* … */ ],
+			attributes: { 'gml:id': 'P1' },
+			children: [ /* … */ ],
+		}]
+	}]
 }
 ```
 
@@ -103,7 +134,7 @@ Uses [the `GetCapabilities` method](http://docs.geoserver.org/stable/en/user/ser
 	defaultVersion: '2.0.0',
 	allowedVersions: ['1.0.0', '1.1.0', '2.0.0'],
 	featureTypes: [ {
-		name: 'fis:re_postleit',
+		name: 'fis:s_plz',
 		title: 'Postleitzahlen',
 		description: 'PLZ - Postleitzahlgebiete Berlins',
 		crs: 'urn:ogc:def:crs:EPSG:6.9:25833',
