@@ -36,13 +36,15 @@
 		"xml-reader": "^2.4.3"
 	},
 	"devDependencies": {
+		"eslint": "^8.35.0",
 		"is-stream": "^2.0.0",
 		"tap-min": "^2.0.0",
 		"tape": "^5.0.0",
 		"tape-promise": "^4.0.0"
 	},
 	"scripts": {
+		"lint": "eslint .",
 		"test": "env NODE_ENV=dev node test.js | tap-min",
-		"prepublishOnly": "npm test"
+		"prepublishOnly": "npm run lint && npm test"
 	}
 }
