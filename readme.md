@@ -1,11 +1,12 @@
 # query-fis-broker-wfs
 
-**Query WFS sources in the [Berlin geodata portal *FIS-Broker*](http://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/).**
+**Query WFS sources in the [Berlin geodata portal *FIS-Broker*](https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/).**
 
 [![npm version](https://img.shields.io/npm/v/query-fis-broker-wfs.svg)](https://www.npmjs.com/package/query-fis-broker-wfs)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/query-fis-broker-wfs.svg)
-[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
-[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+![minimum Node.js version](https://img.shields.io/node/v/query-fis-broker-wfs.svg)
+[![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
+[![chat with me on Twitter](https://img.shields.io/badge/chat%20with%20me-on%20Twitter-1da1f2.svg)](https://twitter.com/derhuerst)
 
 
 ## Installing
