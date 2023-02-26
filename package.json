@@ -31,7 +31,6 @@
 		"fetch-ponyfill": "^6.0.0",
 		"iconv-lite": "^0.6.0",
 		"peek-stream": "^1.1.2",
-		"pinkie-promise": "^2.0.1",
 		"xml-reader": "^2.4.3"
 	},
 	"devDependencies": {
