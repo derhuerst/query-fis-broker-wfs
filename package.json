@@ -1,7 +1,7 @@
 {
 	"name": "query-fis-broker-wfs",
 	"description": "Query WFS sources in the Berlin geodata portal \"FIS-Broker\".",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "index.js",
 	"files": [
 		"index.js",
