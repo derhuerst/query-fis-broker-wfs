@@ -168,6 +168,11 @@ Uses [the `GetFeature` method](http://docs.geoserver.org/stable/en/user/services
 You may optionally pass the options `bbox`, `crs`, `results`, `sortBy`, `props`.
 
 
+## Related
+
+- [parse-gml-polygon](https://github.com/derhuerst/parse-gml-polygon) – Convert a [GML](https://en.wikipedia.org/wiki/Geography_Markup_Language) `Polygon` into a [GeoJSON](http://geojson.org) geometry.
+
+
 ## Contributing
 
 If you have a question or have difficulties using `query-fis-broker-wfs`, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/query-fis-broker-wfs/issues).

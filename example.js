@@ -18,6 +18,6 @@ const bbox = [387000, 5812000, 386000, 5813000]
 	for await (const feature of features) {
 		const plz = findIn(feature, 'fis:plz')
 		const polygon = findIn(findIn(feature, 'fis:geom'), 'gml:Polygon')
-		console.log('found zip code', textOf(plz), polygon)
+		console.log('found zip code', textOf(plz), inspect(polygon, {depth: 4, colors: true}))
 	}
 }
