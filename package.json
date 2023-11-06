@@ -36,6 +36,7 @@
 	"devDependencies": {
 		"eslint": "^8.35.0",
 		"is-stream": "^3.0.0",
+		"parse-gml-polygon": "^0.3.5",
 		"tap-min": "^3.0.0",
 		"tape": "^5.0.0",
 		"tape-promise": "^4.0.0"

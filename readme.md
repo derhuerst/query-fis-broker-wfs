@@ -95,6 +95,8 @@ It will return data in the [`xml-reader`](https://www.npmjs.com/package/xml-read
 }
 ```
 
+You can use [parse-gml-polygon](https://github.com/derhuerst/parse-gml-polygon) to convert the `gml:*` elements (`gml:Polygon` etc.) within `fis:geom` to [GeoJSON](http://geojson.org); [`example.js`](example.js) demonstrates how to do this.
+
 
 ## API
 
