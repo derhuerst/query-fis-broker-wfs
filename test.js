@@ -112,3 +112,20 @@ test('getFeatures', async (t) => {
 
 	t.end()
 })
+
+test('getFeatures with geojson: true', async (t) => {
+	t.equal(all.getFeatures, getFeatures)
+
+	const features = getFeatures(endpoint, layer, {
+		bbox,
+		geojson: true,
+	})
+	t.ok(isReadableStream(features))
+
+	for await (const feature of features) {
+		t.ok(feature)
+		// todo
+	}
+
+	t.end()
+})

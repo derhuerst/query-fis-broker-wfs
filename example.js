@@ -16,8 +16,23 @@ const bbox = [387000, 5812000, 386000, 5813000]
 	console.log(inspect(capabilities, {depth: Infinity, colors: true}))
 }
 
+// request Berlin zip codes as GeoJSON
 {
-	const features = getFeatures(endpoint, layer, {bbox})
+	const features = getFeatures(endpoint, layer, {
+		bbox,
+		geojson: true,
+	})
+	for await (const feature of features) {
+		const plz = feature.properties.plz
+		console.log('found zip code', plz, inspect(feature.geometry, {depth: 4, colors: true}))
+	}
+}
+
+// request Berlin zip codes as GML
+{
+	const features = getFeatures(endpoint, layer, {
+		bbox,
+	})
 	for await (const feature of features) {
 		const plz = findIn(feature, 'fis:plz')
 		const geom = findIn(feature, 'fis:geom')
