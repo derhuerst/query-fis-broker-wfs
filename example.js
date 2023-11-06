@@ -7,6 +7,8 @@ import {textOf, findIn} from './lib/helpers.js'
 
 const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_plz'
 const layer = 'fis:s_plz'
+// senstadt/s_plz uses the ETRS89 (EPSG:25833) coordinate reference system (CRS).
+// see also https://epsg.io/25833 & http://www.opengis.net/def/crs/EPSG/0/25833
 const bbox = [387000, 5812000, 386000, 5813000]
 
 {

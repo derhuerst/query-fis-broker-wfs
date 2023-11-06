@@ -23,6 +23,8 @@ import {getFeatures} from 'query-fis-broker-wfs/get-features.js'
 
 const endpoint = 'https://fbinter.stadt-berlin.de/fb/wfs/data/senstadt/s_plz'
 const layer = 'fis:s_plz'
+// senstadt/s_plz uses the ETRS89 (EPSG:25833) coordinate reference system (CRS).
+// see also https://epsg.io/25833 & http://www.opengis.net/def/crs/EPSG/0/25833
 const bbox = [387000, 5812000, 386000, 5813000]
 
 const features = getFeatures(endpoint, layer, {bbox}
@@ -31,7 +33,9 @@ for await (const feature of features) {
 }
 ```
 
-It will return data in the [`xml-reader`](https://www.npmjs.com/package/xml-reader) shape:
+*Note:* You can obtain the WFS layer's native [coordinate reference system (CRS)](https://en.wikipedia.org/wiki/Geographic_coordinate_system) from the `layers[…].crs` field of a [`getCapabilities()`](#getcapabilitiesendpoint---promise) response.
+
+The call above will return data in the [`xml-reader`](https://www.npmjs.com/package/xml-reader) shape:
 
 ```js
 {
@@ -172,6 +176,7 @@ You may optionally pass the options `bbox`, `crs`, `results`, `sortBy`, `props`.
 
 ## Related
 
+- [transform-coordinates](https://github.com/derhuerst/transform-coordinates) – Transform coordinates from one [coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) to another.
 - [parse-gml-polygon](https://github.com/derhuerst/parse-gml-polygon) – Convert a [GML](https://en.wikipedia.org/wiki/Geography_Markup_Language) `Polygon` into a [GeoJSON](http://geojson.org) geometry.
 
 
