@@ -12,6 +12,7 @@ export const defaults = {
 	props: null
 }
 
+// todo [breaking]: make this an async function?
 export const getFeatures = (endpoint, layer, opt = {}) => {
 	if ('string' !== typeof layer || !layer) {
 		throw new Error('layer must be a non-empty string.')
